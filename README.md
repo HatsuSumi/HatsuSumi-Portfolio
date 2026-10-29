@@ -2,6 +2,10 @@
 
 HatsuSumi 的个人作品集网站，集中展示美术作品、创作过程和编程项目。站点使用 Vite 与原生 TypeScript 构建，不依赖前端 UI 框架。
 
+## 在线访问
+
+[https://hatsusumi.github.io/HatsuSumi-Portfolio/](https://hatsusumi.github.io/HatsuSumi-Portfolio/)
+
 ## 技术栈
 
 - **语言**：TypeScript
