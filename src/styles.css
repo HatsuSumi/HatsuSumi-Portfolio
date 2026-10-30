@@ -993,6 +993,13 @@ footer {
     margin-top: 32px;
 }
 
+.detail-block .eyebrow {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
 .external-links {
     display: flex;
     flex-wrap: wrap;
