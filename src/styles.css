@@ -969,7 +969,7 @@ footer {
 
 .detail-meta span {
     color: var(--muted);
-    font: 10px var(--mono);
+    font: 500 13px/1.4 var(--mono);
 }
 
 .detail-meta strong {

@@ -24,12 +24,72 @@
         <main class="main-content" id="top">
           <section class="hero" id="about"><div><span class="eyebrow">Independent creator / developer</span><h1>Proof that<br><em>I was here.</em></h1></div><div class="hero-note"><p>这是 HatsuSumi 的私人档案。这里收录视觉练习、工具、网站、数据，以及一些尚未完成的念头。</p><a class="text-link" href="#archive">开始浏览 <span>↓</span></a></div></section>
           <section class="stats-strip" aria-label="作品统计"><div><strong data-stat="artworks"></strong><span>美术作品</span></div><div><strong data-stat="projects"></strong><span>编程项目</span></div><div><strong data-stat="technologies"></strong><span>技术与工具</span></div><div class="stats-quote">“做东西本身，就是一种活着的证据。”</div></section>
-          <section class="archive-section" id="archive"><div class="section-heading"><div><span class="section-number" id="archive-number">01 / ARCHIVE</span><h2 id="archive-title">美术作品</h2></div><p id="archive-description">动画、动态壁纸、临摹与绘画过程。<br>按时间，或者按兴趣浏览。</p></div><div class="archive-toolbar"><div class="tabs"><button class="tab active" data-section-tab="artworks">美术作品 <sup data-count="artworks"></sup></button><button class="tab" data-section-tab="projects">编程项目 <sup data-count="projects"></sup></button></div><div class="controls"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="搜索标题、标签或技术" aria-label="搜索内容"></label><div class="filter-list" id="filters"></div></div></div><div class="content-grid" id="content-grid"></div><div class="empty-state" id="empty-state" hidden>没有匹配的档案。换个关键词试试。</div></section>
+          <section class="archive-section" id="archive"><div class="section-heading"><div><span class="section-number" id="archive-number">01 / ARCHIVE</span><h2 id="archive-title">美术作品</h2></div><p id="archive-description"><span data-slot="description-line-1">动画、动态壁纸、临摹与绘画过程。</span><br><span data-slot="description-line-2">按时间，或者按兴趣浏览。</span></p></div><div class="archive-toolbar"><div class="tabs"><button class="tab active" data-section-tab="artworks">美术作品 <sup data-count="artworks"></sup></button><button class="tab" data-section-tab="projects">编程项目 <sup data-count="projects"></sup></button></div><div class="controls"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="搜索标题、标签或技术" aria-label="搜索内容"></label><div class="filter-list" id="filters"></div></div></div><div class="content-grid" id="content-grid"></div><div class="empty-state" id="empty-state" hidden>没有匹配的档案。换个关键词试试。</div></section>
           <section class="about-section" id="about-here"><div class="section-heading about-heading"><div><span class="section-number">03 / ABOUT</span><h2>关于这里</h2></div><p>一个人创作，也持续学习。<br>把想法变成可以看见、听见和使用的东西。</p></div><div class="about-intro"><span class="eyebrow">INDEPENDENT GAME DEVELOPER</span><h3>你好，我是 HatsuSumi。</h3><p>我是一位独立游戏开发者，喜欢从一个念头开始，亲手把它变成完整的作品。我的创作横跨编程、美术与音乐，这个网站记录了我一路尝试、学习和完成的项目。</p></div><div class="about-disciplines"><article><span class="discipline-index">01</span><h3>编程</h3><p>Web 开发 · 软件开发 · 游戏开发</p></article><article><span class="discipline-index">02</span><h3>美术</h3><p>绘画 · 建模 · 动画制作</p></article><article><span class="discipline-index">03</span><h3>音乐</h3><p>作曲</p></article></div><figure class="desktop-figure"><img src="/assets/desktop-screenshot.png" alt="我的电脑桌面与日常创作工具" loading="lazy"><figcaption><span>WORKSPACE / 工具与工作环境</span><span>把不同领域的工具，带进同一个创作过程。</span></figcaption></figure><figure class="resilience-figure"><img src="/assets/major%20depressive%20disorder%20(severe)%20.jpg" alt="重度抑郁症就诊单据，个人信息已打码" loading="lazy"><figcaption><span>KEEP CREATING / 仍然创作</span><span>即使身处重度抑郁的低谷，我仍坚持完成了许多作品。这份经历让我看见自己的韧性，也让我一步步走向更好的生活。</span></figcaption></figure><div class="support-section"><div class="support-copy"><span class="eyebrow">SUPPORT MY WORK</span><h3>支持独立创作</h3><p>如果你喜欢这里的作品，或想为持续创作添一份支持，可以使用下方任一方式。</p></div><div class="payment-options"><figure class="payment-option"><img src="/assets/qrcodes/alipay.png" alt="支付宝收款二维码" loading="lazy"><figcaption><strong>支付宝</strong><span>ALIPAY</span></figcaption></figure><figure class="payment-option"><img src="/assets/qrcodes/wechat.png" alt="微信收款二维码" loading="lazy"><figcaption><strong>微信支付</strong><span>WECHAT PAY</span></figcaption></figure></div></div></section>
           <footer><span>© HatsuSumi / Personal Archive</span><span>Made with patience and too many tabs.</span></footer>
         </main>
       </div>
       <div class="drawer-backdrop" id="drawer-backdrop"></div><aside class="detail-drawer" id="detail-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="作品详情"><button class="close-drawer" id="close-drawer" aria-label="关闭详情">×</button><div id="drawer-content"></div></aside>
+    </template>
+    <template id="artwork-card-template">
+      <article class="archive-card artwork-card" tabindex="0" role="button">
+        <div class="card-image">
+          <img data-slot="image" loading="lazy">
+          <span class="card-index" data-slot="index"></span>
+          <span class="media-type" data-slot="media-type"></span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span data-slot="date"></span><span data-slot="category"></span></div>
+          <h3 data-slot="title"></h3>
+          <p data-slot="description"></p>
+          <div class="tag-row" data-slot="tags"></div>
+        </div>
+      </article>
+    </template>
+    <template id="project-card-template">
+      <article class="archive-card project-card" tabindex="0" role="button">
+        <div class="project-card-top"><span class="card-index" data-slot="index"></span><span class="project-status" data-slot="status"></span></div>
+        <div class="project-symbol">{ }</div>
+        <div class="card-body">
+          <div class="card-meta"><span data-slot="date"></span><span data-slot="category"></span></div>
+          <h3 data-slot="title"></h3>
+          <div class="project-subtitle" data-slot="subtitle"></div>
+          <p data-slot="description"></p>
+          <div class="tag-row" data-slot="tags"></div>
+        </div>
+      </article>
+    </template>
+    <template id="filter-template"><button class="filter" type="button"></button></template>
+    <template id="tag-template"><span></span></template>
+    <template id="detail-meta-template">
+      <div class="detail-meta"><span data-slot="label"></span><strong data-slot="value"></strong></div>
+    </template>
+    <template id="external-link-template">
+      <a target="_blank" rel="noreferrer"><span data-slot="name"></span> <span aria-hidden="true">↗</span></a>
+    </template>
+    <template id="external-links-template"><div class="external-links"></div></template>
+    <template id="muted-template"><span class="muted"></span></template>
+    <template id="gallery-item-template">
+      <figure><img data-slot="image"><figcaption data-slot="caption"></figcaption></figure>
+    </template>
+    <template id="artwork-detail-template">
+      <div class="artwork-detail">
+        <div class="drawer-header"><span class="eyebrow" data-slot="eyebrow"></span><h2 data-slot="title"></h2><p data-slot="description"></p></div>
+        <div class="detail-gallery" data-slot="gallery"></div>
+        <div class="detail-grid" data-slot="metadata"></div>
+        <div class="detail-video" data-slot="video" hidden><span class="eyebrow">MOTION / PROCESS</span><video controls preload="metadata"></video></div>
+        <div class="detail-tags" data-slot="tags"></div>
+        <div data-slot="links"></div>
+      </div>
+    </template>
+    <template id="project-detail-template">
+      <div class="project-detail">
+        <div class="drawer-header project-detail-header"><span class="eyebrow" data-slot="eyebrow"></span><h2 data-slot="title"></h2><div class="project-subtitle" data-slot="subtitle"></div><p data-slot="description"></p></div>
+        <div class="detail-grid" data-slot="metadata"></div>
+        <section class="detail-block"><span class="eyebrow">ROLE / 参与角色</span><div class="detail-tags" data-slot="roles"></div></section>
+        <section class="detail-block"><span class="eyebrow">STACK / 技术栈</span><div class="detail-tags" data-slot="tags"></div></section>
+        <section class="detail-block"><span class="eyebrow">LINKS / 外部链接</span><div data-slot="links"></div></section>
+      </div>
     </template>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
