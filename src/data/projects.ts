@@ -269,7 +269,10 @@ export const projects: Project[] = [
     status: '持续更新中。',
     releaseDate: '2026-10-29',
     roles: ['架构设计', '前端', 'UI/UX', '测试', '维护'],
-    links: []
+    links: [
+      { name: 'GitHub', url: 'https://github.com/HatsuSumi/HatsuSumi-Portfolio/' },
+      { name: '主页', url: 'https://hatsusumi.github.io/HatsuSumi-Portfolio/' }
+    ]
   },
   {
     id: 'project-16',
